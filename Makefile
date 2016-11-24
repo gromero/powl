@@ -15,6 +15,6 @@ clean:
 	rm -fr *.functions
 
 view:
-	objdump -d ./powl_26  | fgrep ">:"  | sort -u | awk  '{print $2}' > powl_26.functions
-	objdump -d ./powl_27  | fgrep ">:"  | sort -u | awk  '{print $2}' > powl_27.functions
+	objdump -d ./powl_26  | fgrep ">:"  | sort -u | awk  '{print $$2}' > powl_26.functions
+	objdump -d ./powl_27  | fgrep ">:"  | sort -u | awk  '{print $$2}' > powl_27.functions
 	vimdiff powl_26.functions powl_27.functions
