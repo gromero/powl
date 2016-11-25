@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=
+CFLAGS=-mlong-double-64
 LDFLAGS=-g -lm -static
 
 %.o:	%.c
