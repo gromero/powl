@@ -3,11 +3,11 @@ CFLAGS=
 LDFLAGS=-g -lm -static
 
 %.o:	%.c
-	$(CC) $(CFLAGS) $< -c -o $@ $(LDFLAGS) $(EXTF)
+	$(CC) $(CFLAGS) $< -c -o $@ $(LDFLAGS)
 
 all:	powl_26.o powl_27.o
-	$(CC) $(CFLAGS) powl_26.o -o powl_26 $(LDFLAGS) $(EXTF)
-	$(CC) $(CFLAGS) powl_27.o -o powl_27 $(LDFLAGS) $(EXTF)
+	$(CC) $(CFLAGS) powl_26.o -o powl_26 $(LDFLAGS)
+	$(CC) $(CFLAGS) powl_27.o -o powl_27 $(LDFLAGS)
 
 clean:
 	rm -fr powl_26.o powl_26
